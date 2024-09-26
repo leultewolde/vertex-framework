@@ -1,7 +1,7 @@
-import {podRegistry} from '../di/container';
+import { podRegistry } from "../di/container";
 
 export function Service(): ClassDecorator {
-    return (target: any) => {
-        podRegistry.register(target, null);
-    };
+  return (target: any) => {
+    podRegistry.register(target, null);
+  };
 }

@@ -10,7 +10,10 @@
     "test": "mocha --require ts-node/register 'test/**/*.test.ts' --exit",
     "version-bump": "npm version patch -m 'Bump version to %s [ci skip]'",
     "prepublishOnly": "npm run build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "eslint --config eslint.config.mjs \"src/**/*.{ts,tsx}\" \"test/**/*.{ts,tsx}\"",
+    "lint:fix": "eslint --config eslint.config.mjs --fix \"src/**/*.{ts,tsx}\" \"test/**/*.{ts,tsx}\"",
+    "format": "prettier --write 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -20,6 +23,7 @@
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
