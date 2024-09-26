@@ -1,4 +1,4 @@
-import { Service } from "vertex-framework";
+import { Service } from "vertex-framework/dist/src";
 
 @Service()
 export class GreetingService {

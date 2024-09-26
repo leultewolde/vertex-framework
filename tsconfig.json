@@ -1,16 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
     "module": "CommonJS",
+    "target": "ES6",
+    "declaration": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "useDefineForClassFields": false,
-    "skipLibCheck": true,
-    "declaration": true,
-    "outDir": "./dist"
+    "useDefineForClassFields": false
   },
   "include": ["src/**/*", "test/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "examples"]
 }
