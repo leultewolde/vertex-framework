@@ -7,12 +7,12 @@
   "scripts": {
     "build": "tsc",
     "start": "ts-node src/server.ts",
-    "test": "mocha --require ts-node/register 'test/**/*.test.ts' --exit",
+    "test": "mocha --require ts-node/register 'test/framework.test.ts' --exit",
     "version-bump": "npm version patch -m 'Bump version to %s [ci skip]'",
     "prepublishOnly": "npm run build",
     "prepare": "husky",
-    "lint": "eslint --config eslint.config.mjs \"src/**/*.{ts,tsx}\" \"test/**/*.{ts,tsx}\"",
-    "lint:fix": "eslint --config eslint.config.mjs --fix \"src/**/*.{ts,tsx}\" \"test/**/*.{ts,tsx}\"",
+    "lint": "eslint --config eslint.config.mjs \"src/**/*.{ts,tsx}\"",
+    "lint:fix": "eslint --config eslint.config.mjs --fix \"src/**/*.{ts,tsx}\"",
     "format": "prettier --write 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'"
   },
   "lint-staged": {

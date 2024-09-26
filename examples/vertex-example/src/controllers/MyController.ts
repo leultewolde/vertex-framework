@@ -1,4 +1,4 @@
-import { Controller, Get, Inject } from "vertex-framework/dist/src";
+import { Controller, Get, Inject } from "vertex-framework";
 import { GreetingService } from "../services/GreetingService";
 
 @Controller("/api")

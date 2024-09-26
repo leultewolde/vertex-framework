@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "CommonJS",
-    "target": "ES6",
+    "target": "ESNext",
     "declaration": true,
     "outDir": "./dist",
     "rootDir": "./src",
@@ -12,6 +12,6 @@
     "experimentalDecorators": true,
     "useDefineForClassFields": false
   },
-  "include": ["src/**/*", "test/**/*"],
-  "exclude": ["node_modules", "examples"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "examples", "test/**/*"]
 }
