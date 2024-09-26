@@ -1,0 +1,24 @@
+{
+  "name": "vertex-example",
+  "version": "1.0.0",
+  "description": "Example project using My Framework",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/server.ts",
+    "test": "mocha --require ts-node/register 'test/**/*.test.ts'"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "inversify": "^5.0.5",
+    "reflect-metadata": "^0.1.13",
+    "vertex-framework": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/node": "^15.6.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5"
+  }
+}
