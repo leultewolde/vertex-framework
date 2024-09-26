@@ -29,7 +29,16 @@ export default [
             // Include recommended rules from TypeScript ESLint plugin
             ...typescriptEslintPlugin.configs.recommended.rules,
 
-            // Disable the no-explicit-any rule
+            // Adjust the no-unused-vars rule
+            '@typescript-eslint/no-unused-vars': [
+                'error',
+                {
+                    argsIgnorePattern: '^_', // Ignore variables starting with '_'
+                    varsIgnorePattern: '^_', // Ignore variables starting with '_'
+                    args: 'after-used', // Only report unused variables after the last used argument
+                    ignoreRestSiblings: true, // Ignore rest siblings
+                },
+            ],
             '@typescript-eslint/no-explicit-any': 'off',
 
             // Include Prettier recommended config

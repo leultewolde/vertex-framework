@@ -1,5 +1,5 @@
 import "reflect-metadata";
-import express, { Application, Request, Response } from "express";
+import express, { Application, NextFunction, Request, Response } from "express";
 import cors from "cors";
 import morgan from "morgan";
 import { podRegistry } from "./di/container";
@@ -51,7 +51,7 @@ export class FrameworkServer {
     if (enableCors) this.app.use(cors());
     if (enableLogging) this.app.use(morgan("combined"));
 
-    this.app.use((err: any, req: Request, res: Response) => {
+    this.app.use((err: any, req: Request, res: Response, _: NextFunction) => {
       console.error(err);
       res.status(500).json({ error: "Internal Server Error" });
     });
