@@ -1,16 +1,14 @@
-import {Controller, Get} from '../../../../src';
-import {GreetingService} from '../services/GreetingService';
-import {Inject} from "../../../../src/decorators/inject";
+import { Controller, Get, Inject } from "vertex-framework";
+import { GreetingService } from "../services/GreetingService";
 
-@Controller('/api')
+@Controller("/api")
 export class MyController {
+  @Inject(GreetingService)
+  private greetingService!: GreetingService;
 
-    @Inject(GreetingService)
-    private greetingService!: GreetingService;
-
-    @Get('/hello')
-    getHello(req: any, res: { json: (arg0: { message: string; }) => void; }) {
-        const message = this.greetingService.getMessage();
-        res.json({message});
-    }
+  @Get("/hello")
+  getHello(req: any, res: { json: (arg0: { message: string }) => void }) {
+    const message = this.greetingService.getMessage();
+    res.json({ message });
+  }
 }
