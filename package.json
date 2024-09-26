@@ -1,0 +1,39 @@
+{
+  "name": "vertex-framework",
+  "version": "1.0.1",
+  "description": "A lightweight Node.js framework with automatic dependency injection.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/server.ts",
+    "test": "mocha --require ts-node/register 'test/**/*.test.ts' --exit",
+    "version-bump": "npm version patch -m 'Bump version to %s [ci skip]'",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "inversify": "^6.0.2",
+    "morgan": "^1.10.0",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^5.0.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/mocha": "^10.0.8",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.7.0",
+    "@types/supertest": "^6.0.2",
+    "chai": "^5.1.1",
+    "cross-env": "^7.0.3",
+    "mocha": "^10.7.3",
+    "supertest": "^7.0.0",
+    "ts-mocha": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "type": "commonjs"
+}
